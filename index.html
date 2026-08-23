@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tote Shirt — T-Shirt to Tote Bag</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN / SIGN UP SCREEN ================= -->
+
+<div id="authScreen" class="auth-screen">
+
+    <div class="auth-card">
+
+        <div class="auth-left">
+            <div class="brand">TOTE SHIRT</div>
+
+            <div class="auth-message">
+                <div class="recycle-symbol">♻</div>
+
+                <h1>
+                    Give your<br>
+                    T-shirt a<br>
+                    second life.
+                </h1>
+
+                <p>
+                    Turn an old favourite into a useful,
+                    reusable tote bag.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="auth-right">
+
+            <h2 id="authTitle">Welcome back</h2>
+
+            <p class="auth-subtitle">
+                Sign in to enter the Tote Shirt website.
+            </p>
+
+
+            <div class="auth-tabs">
+
+                <button
+                    class="auth-tab active"
+                    id="loginTab"
+                    type="button">
+                    Log in
+                </button>
+
+                <button
+                    class="auth-tab"
+                    id="signupTab"
+                    type="button">
+                    Sign up
+                </button>
+
+            </div>
+
+
+            <form id="authForm">
+
+                <div
+                    class="form-group"
+                    id="nameGroup"
+                    style="display:none;">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name">
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                    id="authButton">
+
+                    Log in
+
+                </button>
+
+            </form>
+
+
+            <p class="demo-text">
+                Demo website — your login is stored only
+                in this browser.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= MAIN WEBSITE ================= -->
+
+<div id="mainWebsite" style="display:none;">
+
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                TOTE SHIRT
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#how">
+                    How It Works
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+                <a href="#contact">
+                    Get in Touch
+                </a>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button">
+
+                    Log out
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-text">
+
+                <span class="eyebrow">
+                    T-SHIRT → TOTE BAG
+                </span>
+
+                <h1>
+                    Wear it.<br>
+                    Reuse it.
+                </h1>
+
+                <p>
+                    ReTote transforms old and unwanted
+                    T-shirts into practical, reusable
+                    tote bags.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#pricing"
+                        class="button dark-button">
+
+                        See Pricing
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="button light-button">
+
+                        Get in Touch
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-art">
+
+                <div class="tote-illustration">
+
+                    <div class="tote-handle"></div>
+
+                    <div class="tote-body">
+
+                        <span>
+                            TOTE SHIRT
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+        <div class="section-container">
+
+            <span class="eyebrow">
+                THE IDEA
+            </span>
+
+            <h2 class="section-title">
+                A simple change with
+                a useful result.
+            </h2>
+
+            <p class="section-description">
+                Instead of letting an unwanted T-shirt
+                sit unused, we transform it into
+                something useful that can be carried
+                again and again.
+            </p>
+
+
+            <div class="three-cards">
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Upcycle
+                    </h3>
+
+                    <p>
+                        Give an old T-shirt a new purpose
+                        instead of throwing it away.
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Personal
+                    </h3>
+
+                    <p>
+                        Keep the colours, graphics and
+                        memories that made your shirt special.
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Useful
+                    </h3>
+
+                    <p>
+                        Turn it into a lightweight tote
+                        for everyday use.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section
+        id="how"
+        class="section steps-section">
+
+        <div class="section-container">
+
+            <span class="eyebrow">
+                HOW IT WORKS
+            </span>
+
+            <h2 class="section-title">
+                From shirt to tote.
+            </h2>
+
+
+            <div class="three-cards">
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        STEP 1
+                    </span>
+
+                    <h3>
+                        Choose your T-shirt
+                    </h3>
+
+                    <p>
+                        Pick a clean T-shirt that you
+                        no longer use but still want
+                        to keep.
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        STEP 2
+                    </span>
+
+                    <h3>
+                        We transform it
+                    </h3>
+
+                    <p>
+                        The T-shirt is reshaped into
+                        a practical tote bag.
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <span class="card-number">
+                        STEP 3
+                    </span>
+
+                    <h3>
+                        Carry it again
+                    </h3>
+
+                    <p>
+                        Your old T-shirt gets a
+                        completely new purpose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRICING ================= -->
+
+    <section
+        id="pricing"
+        class="section">
+
+        <div class="section-container">
+
+            <span class="eyebrow">
+                SIMPLE PRICING
+            </span>
+
+            <h2 class="section-title">
+                One clear price.
+            </h2>
+
+            <p class="section-description">
+                A straightforward starting price for
+                a basic T-shirt-to-tote conversion.
+            </p>
+
+
+            <div class="price-card">
+
+                <div>
+
+                    <span class="price-label">
+                        TOTE PRICE
+                    </span>
+
+                    <div class="price">
+                        ₹149
+                    </div>
+
+                    <p>
+                        Basic T-shirt tote conversion
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#contact"
+                    class="button dark-button">
+
+                    Ask About an Order
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= GET IN TOUCH ================= -->
+
+    <section
+        id="contact"
+        class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- POSTER -->
+
+            <div class="contact-poster">
+
+                <div class="poster-top">
+                    RETOTE • GET IN TOUCH
+                </div>
+
+                <div class="poster-main">
+
+                    <h2>
+                        OLD<br>
+                        SHIRT.<br>
+                        NEW<br>
+                        PURPOSE.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Have a T-shirt you'd like
+                    to transform?
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-information">
+
+                <span class="eyebrow">
+                    GET IN TOUCH
+                </span>
+
+                <h2 class="section-title">
+                    Let's make something useful.
+                </h2>
+
+                <p class="contact-description">
+                    For orders, questions, custom ideas
+                    or collaboration, get in touch with us.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <span>
+                        toteshirtindia@gmail.com
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        Instagram
+                    </strong>
+
+                    <span>
+                        @toteshirtindia
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        Response time
+                    </strong>
+
+                    <span>
+                        Usually within 3–5 days
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 ReTote —
+            T-shirt to Tote Bag Project.
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
