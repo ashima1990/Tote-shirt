@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tote Shirt — T-Shirt to Tote Bag</title>
+    <meta name="theme-color" content="#17221d">
+    <meta name="description" content="Give your old T-shirt a second life. Request an upcycled tote bag from Tote Shirt.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css.css">
 </head>
 
@@ -183,6 +187,14 @@
     </header>
 
 
+
+    <nav class="mobile-app-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#custom">Custom</a>
+        <a href="#orders">Orders</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <!-- ================= HERO ================= -->
 
@@ -486,6 +498,78 @@
 
 
 
+
+    <!-- ================= SHOP ================= -->
+    <section id="shop" class="section app-shop-section">
+        <div class="section-container">
+            <span class="eyebrow">THE TOTE SHIRT SHOP</span>
+            <h2 class="section-title">Give your old tee a new life.</h2>
+            <p class="section-description">Start with our basic T-shirt-to-tote conversion. Have a special idea? Send us a custom request below. Every order is confirmed with you before work begins.</p>
+            <div class="shop-grid">
+                <article class="shop-card">
+                    <div class="shop-art" aria-label="Illustration of a reusable tote bag" role="img"><span class="shop-bag-handle"></span><span class="shop-bag-body">TOTE<br>SHIRT</span></div>
+                    <div class="shop-card-content">
+                        <span class="shop-tag">MADE FROM YOUR T-SHIRT</span>
+                        <h3>Basic T-shirt Tote</h3>
+                        <p>Turn a clean, much-loved T-shirt into a reusable everyday bag.</p>
+                        <div class="shop-card-bottom"><strong>₹149</strong><button class="button dark-button" type="button" data-order-product="Basic T-shirt Tote">Request this</button></div>
+                    </div>
+                </article>
+                <article class="shop-card custom-shop-card">
+                    <div class="shop-art custom-shop-art" aria-label="Illustration of a personalized tote bag" role="img"><span class="shop-bag-handle"></span><span class="shop-bag-body">MADE<br>FOR YOU</span></div>
+                    <div class="shop-card-content">
+                        <span class="shop-tag">YOUR IDEA, YOUR TOTE</span>
+                        <h3>Custom Tote Request</h3>
+                        <p>Tell us about your preferred design, colours, or special details.</p>
+                        <div class="shop-card-bottom"><strong>Quote on request</strong><a class="button dark-button" href="#custom">Personalise</a></div>
+                    </div>
+                </article>
+            </div>
+            <p class="order-note">Prices are starting estimates. We will confirm design, availability, and any extra charges with you before accepting an order.</p>
+        </div>
+    </section>
+
+    <!-- ================= CUSTOM ORDER ================= -->
+    <section id="custom" class="section custom-order-section">
+        <div class="section-container custom-order-layout">
+            <div>
+                <span class="eyebrow">MAKE IT YOURS</span>
+                <h2 class="section-title">Tell us your tote idea.</h2>
+                <p class="section-description">Fill this in and your email app will open with the request ready to send. Nothing is charged online.</p>
+                <div class="custom-points"><p>✓ Use a clean T-shirt you already own</p><p>✓ Share colours or design preferences</p><p>✓ Confirm details with us before we begin</p></div>
+            </div>
+            <form id="orderForm" class="order-form">
+                <label for="customerName">Your name</label>
+                <input id="customerName" name="customerName" autocomplete="name" required placeholder="Name">
+                <label for="customerEmail">Email address</label>
+                <input id="customerEmail" name="customerEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+                <label for="orderType">What would you like?</label>
+                <select id="orderType" name="orderType">
+                    <option>Basic T-shirt Tote — ₹149 starting price</option>
+                    <option>Custom design — quote requested</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required>
+                <label for="designNotes">Design notes (optional)</label>
+                <textarea id="designNotes" name="designNotes" rows="4" placeholder="Tell us about the T-shirt, colours, or design you have in mind."></textarea>
+                <button class="button dark-button order-submit" type="submit">Prepare order request</button>
+                <p class="form-smallprint">This opens your email app; you must press Send there to contact us.</p>
+                <p id="orderFeedback" class="order-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= MY ORDERS ================= -->
+    <section id="orders" class="section orders-section">
+        <div class="section-container">
+            <span class="eyebrow">YOUR REQUESTS</span>
+            <h2 class="section-title">My order requests.</h2>
+            <p class="section-description">Requests prepared on this device appear here as a reminder. This is not a live order-tracking system, and requests are not sent until you send the email.</p>
+            <div id="orderHistory" class="order-history"><p class="empty-orders">No order requests prepared on this device yet.</p></div>
+            <button id="clearOrderHistory" class="button light-button" type="button">Clear local request history</button>
+        </div>
+    </section>
+
     <!-- ================= GET IN TOUCH ================= -->
 
     <section
@@ -604,6 +688,11 @@
 
 
 <script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
+}
+</script>
 
 </body>
 </html>
