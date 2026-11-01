@@ -971,3 +971,100 @@ footer {
     }
 
 }
+
+/* =========================================================
+   APP SHOP, CUSTOM ORDERS, AND MOBILE NAVIGATION
+   ========================================================= */
+.mobile-app-nav {
+    display: none;
+}
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.shop-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+}
+.shop-art {
+    min-height: 245px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #dce8d7, #c5d3bc 55%, #e9d4c0);
+}
+.custom-shop-art {
+    background: linear-gradient(145deg, #e8d8c7, #d4a57d 55%, #dce8d7);
+}
+.shop-bag-body {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    background: #f7f4ed;
+    border-radius: 14px 14px 25px 25px;
+    box-shadow: 12px 15px 0 rgba(23,34,29,.12);
+    text-align: center;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+.shop-bag-handle {
+    position: absolute;
+    top: 35px;
+    width: 68px;
+    height: 52px;
+    border: 10px solid #f7f4ed;
+    border-bottom: 0;
+    border-radius: 50px 50px 0 0;
+    transform: translateY(-5px);
+}
+.shop-card-content { padding: 25px; }
+.shop-tag { color: var(--green); font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.shop-card h3 { margin: 8px 0; font-size: 25px; }
+.shop-card p { color: var(--grey); }
+.shop-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+.shop-card-bottom strong { font-size: 23px; }
+.shop-card-bottom .button { border: 0; cursor: pointer; font-size: 14px; }
+.order-note, .form-smallprint { color: var(--grey); font-size: 13px; margin-top: 18px; }
+.custom-order-section { background: var(--green-light); }
+.custom-order-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.custom-points { display: grid; gap: 10px; font-weight: 700; }
+.order-form { padding: 28px; display: grid; gap: 9px; background: white; border: 1px solid var(--border); border-radius: 20px; }
+.order-form label { margin-top: 8px; font-size: 14px; font-weight: 800; }
+.order-form input, .order-form select, .order-form textarea {
+    width: 100%; min-width: 0; padding: 13px 14px; border: 1px solid #d4d1c8;
+    border-radius: 10px; background: #fff; color: var(--dark); font: inherit;
+}
+.order-form input:focus, .order-form select:focus, .order-form textarea:focus { outline: 2px solid var(--green); outline-offset: 1px; }
+.order-submit { width: 100%; border: 0; cursor: pointer; margin-top: 10px; }
+.order-feedback { color: var(--dark-soft); font-size: 13px; }
+.orders-section { background: #fff; }
+.order-history { display: grid; gap: 12px; margin-bottom: 20px; }
+.empty-orders { padding: 24px; border: 1px dashed var(--border); border-radius: 14px; color: var(--grey); }
+.order-history-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px; border: 1px solid var(--border); border-radius: 14px; }
+.order-history-card p { color: var(--grey); font-size: 13px; margin-top: 4px; }
+.request-status { padding: 6px 10px; background: var(--green-light); border-radius: 999px; font-size: 11px; font-weight: 800; }
+#clearOrderHistory { cursor: pointer; }
+
+.contact-item a { color: #d3dbd5; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 650px) {
+    .mobile-app-nav {
+        position: sticky; top: 0; z-index: 99;
+        display: flex; justify-content: space-around; gap: 4px;
+        padding: 10px 6px; background: rgba(247,244,237,.97);
+        border-bottom: 1px solid var(--border); backdrop-filter: blur(12px);
+    }
+    .mobile-app-nav a { font-size: 12px; font-weight: 800; padding: 5px 4px; }
+    .navbar { position: relative; }
+    .shop-grid, .custom-order-layout { grid-template-columns: 1fr; }
+    .shop-card-bottom { align-items: flex-start; }
+    .shop-card-bottom .button { padding: 11px 13px; }
+    .order-form { padding: 20px; }
+    .order-history-card { align-items: flex-start; flex-direction: column; }
+}
